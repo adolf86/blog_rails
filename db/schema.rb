@@ -48,9 +48,4 @@ ActiveRecord::Schema.define(:version => 20110731210016) do
     t.datetime "updated_at"
   end
 
-  create_table "tags_posts", :id => false, :force => true do |t|
-    t.integer "tag_id"
-    t.integer "post_id"
-  end
-
 end

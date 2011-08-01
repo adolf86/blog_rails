@@ -4,9 +4,10 @@ Blog::Application.routes.draw do
 
   resources :categories
 
-  resources :comments
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   get "home/index"
 
