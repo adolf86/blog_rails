@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
 one:
-  content: MyText
-  author: MyString
+  commenter: MyString
   email: MyString
+  body: MyText
   post: 
 
 two:
-  content: MyText
-  author: MyString
+  commenter: MyString
   email: MyString
+  body: MyText
   post: 

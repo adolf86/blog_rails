@@ -19,6 +19,10 @@
     <%= f.label :content %><br />
     <%= f.text_area :content %>
   </div>
+  <% fields_for :category do |category_form| %>
+    <%= category_form.label :name %>
+    <%= category_form.text_field :name %>
+  <% end %> 
   <div class="actions">
     <%= f.submit %>
   </div>
