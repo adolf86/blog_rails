@@ -1,17 +1,27 @@
 Blog::Application.routes.draw do
  
+  get "session/create"
+
+  get "session/destroy"
+
+  resources :users
+
   resources :tags
 
   resources :categories
 
-  resources :comments
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   get "home/index"
 
+  post 'login' => "session#create"
+  delete 'logout' => "session#destroy" 
+
 	#"root to" changed
-	root :to => "home#index"
+	root :to => "home#index", :as => 'home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

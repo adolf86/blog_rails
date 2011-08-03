@@ -7,7 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <% unless session[:user_id] %>
+    <%= render "session/form" %>
+  <% end %> 
 <%= yield %>
 
 </body>
